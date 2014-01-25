@@ -1,0 +1,299 @@
+							************************
+									 WC_init.out
+							************************
+
+Filename is WC_init.out.
+
+This file contains primary output for SIENA project <<WC_init>>.
+
+Date and time: 25/01/2014 9:40:07 a.m. 
+
+SIENA version 1.1-232 (18 06 2013)
+
+@1
+Data input.
+===========
+
+3 observations,
+85 actors,
+1 dependent network variables,
+0 dependent bipartite variables,
+0 dependent behavior variables,
+2 constant actor covariates,
+1 exogenous changing actor covariates,
+0 constant dyadic covariates,
+1 exogenous changing dyadic covariates,
+file with times of composition change.
+
+@2
+Reading network variables.
+--------------------------
+
+Name of network variable: friendship.
+oneMode network.
+For observation moment 1, degree distributions are as follows:
+Nodes
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 
+41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 
+61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 
+81 82 83 84 85
+out-degrees
+ 3  3  2  4  2  3  5  3 10  4  5  2  5 10 10  1  4 10 10 10 
+ 0  6  5  7  2  3  0  5  3  0  9  8  0  0 10  3  0  7  4  3 
+ 0  7 10 10  8  8  0 10  0  4  3 10  6  7  0  5  7  3  4  5 
+ 3  3  6  5  9  3  2 10  4  0  0  0  8  7  9 10  8  0  4  0 
+ 4  8  3  5  0
+in-degrees
+ 3  3  4  5  5  1  1  3  7  3  3  3  4  7  3  4  8  3  6  6 
+ 6  4  6 12  6  3  2  3  1  7  5  6  2  0  2  6  3  3  2  6 
+ 2  4  9  6  5  7  2  7  6  5  8  0  4 10  7  5  6  7  6  7 
+ 6  8  6  5  8  7  2  6  4  6  4  2  6  5 10  2  5  7  1  4 
+ 4  4  5  2  0
+
+For observation moment 1, number of missing values are:
+Nodes
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 
+41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 
+61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 
+81 82 83 84 85
+missing in rows
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+84  0  0  0  0  0 84  0  0 84  0  0 84 84  0  0 84  0  0  0 
+84  0  0  0  0  0 84  0 84  0  0  0  0  0 84  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0
+missing in columns
+10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 
+ 9 10 10 10 10 10  9 10 10  9 10 10  9  9 10 10  9 10 10 10 
+ 9 10 10 10 10 10  9 10  9 10 10 10 10 10  9 10 10 10 10 10 
+10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 
+10 10 10 10 10
+Total number of missing data: 840, corresponding to a fraction of 0.118.
+
+For observation moment 2, degree distributions are as follows:
+Nodes
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 
+41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 
+61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 
+81 82 83 84 85
+out-degrees
+ 0  3  5  9  1  3  5  0  0  8  5  1  4  6 10  1  9  5 10  7 
+ 3  0  6  9  6  6  2  6  0  4  9  5  8 10  6  7  3  7  5  7 
+ 4  5 10  6  6 10  3 10  0  4  3  0  4  5 10  0 10  3  5  4 
+ 2  3  0  9  8  1  2  6  3  5  0  5  8  5  0  0  9  0  5  5 
+ 0  7  4  0  2
+in-degrees
+ 0  4  7  9  6  0  3  0  0  6  4  4  5  9  6  4  8  4  6  2 
+ 4  4  9 12  6  6  4  5  3  7  9  5  4  0  3  5  4  4  5  8 
+ 4  5  8  9  7  9  2  6  8  2  4  2  4  7  6  9  5  4  5  4 
+ 1  6  3  7  3  6  1  2  2  8  4  5  3  4  9  2  5  1  3  1 
+ 1  4  4  2  1
+
+For observation moment 2, number of missing values are:
+Nodes
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 
+41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 
+61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 
+81 82 83 84 85
+missing in rows
+84  0  0  0  0  0  0 84 84  0  0  0  0  0  0  0  0  0  0  0 
+ 0 84  0  0  0  0  0  0 84  0  0  0  0  0  0  0  0  0  0  0 
+ 0  0  0  0  0  0  0  0 84  0  0 84  0  0  0 84  0  0  0  0 
+ 0  0 84  0  0  0  0  0  0  0 84  0  0  0 84 84  0 84  0  0 
+84  0  0 84  0
+missing in columns
+14 15 15 15 15 15 15 14 14 15 15 15 15 15 15 15 15 15 15 15 
+15 14 15 15 15 15 15 15 14 15 15 15 15 15 15 15 15 15 15 15 
+15 15 15 15 15 15 15 15 14 15 15 14 15 15 15 14 15 15 15 15 
+15 15 14 15 15 15 15 15 15 15 14 15 15 15 14 14 15 14 15 15 
+14 15 15 14 15
+Total number of missing data: 1260, corresponding to a fraction of 0.176.
+In reported in- and outdegrees, missings are not counted.
+
+For observation moment 3, degree distributions are as follows:
+Nodes
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 
+41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 
+61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 
+81 82 83 84 85
+out-degrees
+ 0  5  6  7  3  4  3  0  0  6  5  1  0  8 10  5 10  5  0  6 
+10  0  7 10  8  0  3  7  0  3 10  8  7  0 10  4  5  7  5  0 
+ 3  0  0  9  0  9  3  1  7  4  3 10  1  7  9  5 10  3  0  6 
+ 1  3  2  5  8  5  1  0  5  4  5  2  6  7  5  0  6  5  4  3 
+ 4  6  2  0  4
+in-degrees
+ 0  2  5  7  7  3  4  0  0  4  4  4  5  8  6  5  6  4  4  3 
+ 4  3  8 15  6  7  3  2  3  5  8  6  3  0  5  5  5  6  2  7 
+ 3  4  6  4  4  5  3  6  8  6  5  0  4  6  7  6  7  5  3  3 
+ 6  6  3  3  5  6  0  1  3  9  0  4  7  5 10  0  6  1  4  0 
+ 3  3  5  0  2
+
+For observation moment 3, number of missing values are:
+Nodes
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 
+41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 
+61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 
+81 82 83 84 85
+missing in rows
+84  0  0  0  0  0  0 84 84  0  0  0 84  0  0  0  0  0 84  0 
+ 0 84  0  0  0 84  0  0 84  0  0  0  0 84  0  0  0  0  0 84 
+ 0 84 84  0 84  0  0  0  0  0  0  0  0  0  0  0  0  0 84  0 
+ 0  0  0  0  0  0  0 84  0  0  0  0  0  0  0 84  0  0  0  0 
+ 0  0  0 84  0
+missing in columns
+16 17 17 17 17 17 17 16 16 17 17 17 16 17 17 17 17 17 16 17 
+17 16 17 17 17 16 17 17 16 17 17 17 17 16 17 17 17 17 17 16 
+17 16 16 17 16 17 17 17 17 17 17 17 17 17 17 17 17 17 16 17 
+17 17 17 17 17 17 17 16 17 17 17 17 17 17 17 16 17 17 17 17 
+17 17 17 16 17
+Total number of missing data: 1428, corresponding to a fraction of 0.200.
+In reported in- and outdegrees, missings are not counted.
+
+There are missing data for this network variable,
+and the <<carry missings forward>> option is active.
+This means that for each tie variable,
+the last previous nonmissing value (if any) is imputed.
+If there is no previous nonmissing value, the value 0 is imputed.
+
+@2
+Reading constant actor covariates.
+----------------------------------
+
+2 variables, named:
+sex             
+ethnic          
+
+A total of 2 non-changing individual covariates.
+
+Number of missing cases:
+sex             0 	( 0.0 %)
+ethnic          0 	( 0.0 %)
+
+Information about covariates:
+               minimum  maximum	  mean 
+sex             1.0     2.0      1.800 
+ethnic          1.0     2.0      1.612 
+The mean values are subtracted from the covariates.
+
+@2
+Reading exogenous changing actor covariates.
+--------------------------------------------
+
+1 variable, named:
+alcohol         
+
+A total of 1 exogenous changing actor covariate.
+
+Number of missing cases per period:
+ period	        1        2		 overall
+alcohol          14       16        30 	   ( 17.6 %)
+
+Information about changing covariates:
+               minimum  maximum	  mean 
+alcohol 
+	period   1     1.0     2.0      1.183 
+	period   2     1.0     2.0      1.290 
+Overall                            1.236 
+
+The overall mean value is subtracted from the covariate.
+
+@2
+Reading exogenous dyadic covariates.
+------------------------------------
+
+Exogenous dyadic covariate named WCDyads.
+Number of tie variables with missing data per period:
+ period	        1        2		 overall
+WCDyads        1344        0      1344 	   ( 19.0 %)
+
+Means of	covariates:
+WCDyads         0.039 
+
+This global mean value is subtracted from the changing dyadic covariate.
+
+@2
+Reading files with times of composition change.
+-----------------------------------------------
+
+Composition changes for nodeSet Actors.
+Actor  1 leaves network at time 1.5000.
+Actor  8 leaves network at time 1.5000.
+Actor  9 leaves network at time 1.5000.
+Actor 81 leaves network at time 1.5000.
+Actor 81 joins  network at time 2.5000.
+Actor 85 joins  network at time 2.0000.
+
+In period 1, 0 actors joined and 4 actors left the network.
+
+In period 2, 2 actors joined and 0 actors left the network.
+
+
+There are missing data for network variable friendship.
+
+The mean structural dissimilarity value subtracted in the
+balance calculations is         0.1204.
+
+For the similarity variable calculated from each actor covariate,
+the mean is subtracted.
+These means are:
+Similarity sex          :       0.6762 
+Similarity ethnic       :       0.5193 
+Similarity alcohol      :       0.6411 
+
+For the distance-2 similarity variable calculated from each actor 
+covariate, the mean is also subtracted.
+ These means are:
+Distance-2 Similarity sex         :  friendship
+                                         0.7705
+Distance-2 Similarity ethnic      :  friendship
+                                         0.6717
+Distance-2 Similarity alcohol      :   friendship 
+                                         0.8168
+
+
+@1
+Initial data description.
+=========================
+
+@2
+Change in networks:
+-------------------
+
+For the following statistics, missing values (if any) are not counted.
+
+Network density indicators:
+observation time              1      2      3
+density                    0.063  0.067  0.065
+average degree             5.307  5.600  5.441
+number of ties               398    392    370
+missing fraction           0.118  0.176  0.200
+
+The average degree is 5.449 
+
+
+Tie changes between subsequent observations:
+ periods        0 =>  0   0 =>  1   1 =>  0   1 =>  1   Distance Jaccard   Missing
+  1 ==>  2      4681       119        98       226       217     0.510  2016 (28%)
+  2 ==>  3      4625        92        88       235       180     0.566  2100 (29%)
+
+Dyad Counts:
+ observation    total    mutual    asymm.     null
+     1.          5550      198       326      5026
+     2.          4830      234       220      4376
+     3.          4556      204       238      4114
+
+Standard values for initial parameter values
+-------------------------------------------------
+
+constant friendship rate (period 1)     7.2014 
+constant friendship rate (period 2)     6.0736 
+outdegree (density)                               -1.2754 
+
+Initialisation of project <<WC_init>> executed succesfully.
