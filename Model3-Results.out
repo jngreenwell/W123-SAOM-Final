@@ -1,0 +1,2217 @@
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 13:51:09
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 743475.
+Effects object used: Model3 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  3-cycles                                        0.0000
+  7. eval:  indegree - popularity (sqrt)                    0.0000  (fixed) 
+  8. eval:  indegree - activity (sqrt)                      0.0000  (fixed) 
+  9. eval:  outdegree - activity (sqrt)                     0.0000  (fixed) 
+ 10. eval:  Dummy2:friendship ego                           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Sum of indegrees x sqrt(indegree)                                 1701.7756
+  8. Sum of outdegrees x sqrt(indegree)                                1591.0573
+  9. Sum of outdegrees^(1.5)                                           1883.8760
+ 10. Sum of outdegrees x Dummy2:friendship                              -10.0000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3612 iterations.
+Parameter estimates based on 612 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.   0.3647  12.9915   0.0281                      
+  2.   0.3593  11.8328   0.0304                      
+  3.   0.6440  21.6106   0.0298                      
+  4.   0.7433  19.0946   0.0389                      
+  5.  -0.7000 109.5354  -0.0064                      
+  6.   0.4080  32.8241   0.0124                      
+  7.  34.5413  74.6696   0.4626     (fixed parameter)
+  8.  54.6029  71.4361   0.7644     (fixed parameter)
+  9.  32.0219  75.8245   0.4223     (fixed parameter)
+ 10.  -0.3567  10.8118  -0.0330                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3612 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           6.7621  (   0.6820)
+ 2. rate:  constant friendship rate (period 2)           6.1527  (   0.6125)
+ 3. eval:  outdegree (density)                          -2.3882  (   0.0820)
+ 4. eval:  reciprocity                                   2.2166  (   0.1906)
+ 5. eval:  transitive triplets                           0.5243  (   0.0484)
+ 6. eval:  3-cycles                                     -0.4532  (   0.1034)
+ 7. eval:  indegree - popularity (sqrt)                  0.0000  (  fixed  )
+ 8. eval:  indegree - activity (sqrt)                    0.0000  (  fixed  )
+ 9. eval:  outdegree - activity (sqrt)                   0.0000  (  fixed  )
+10. eval:  Dummy2:friendship ego                        -0.2646  (   0.0993)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.465     -0.015      0.007     -0.011     -0.005      0.008         NA         NA         NA      0.002
+    -0.036      0.375      0.002      0.001     -0.001      0.001         NA         NA         NA      0.000
+     0.131      0.044      0.007     -0.009     -0.002      0.004         NA         NA         NA      0.001
+    -0.084      0.011     -0.590      0.036      0.004     -0.013         NA         NA         NA      0.000
+    -0.159     -0.041     -0.601      0.458      0.002     -0.004         NA         NA         NA      0.000
+     0.110      0.023      0.441     -0.649     -0.858      0.011         NA         NA         NA      0.000
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+     0.032     -0.006      0.067      0.020     -0.029     -0.046         NA         NA         NA      0.010
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  indegree - popularity (sqrt)                =   0.0000
+ (2)   eval:  indegree - activity (sqrt)                  =   0.0000
+ (3)   eval:  outdegree - activity (sqrt)                 =   0.0000
+_________________________________________________
+                   
+Joint test:
+-----------
+   c =  18.0533   d.f. = 3   p-value =   0.0004
+
+(1) tested separately:
+-----------------------
+ - two-sided:
+  c =   5.2223   d.f. = 1  p-value =   0.0223
+ - one-sided (normal variate):  -2.2852
+
+(2) tested separately:
+-----------------------
+ - two-sided:
+  c =  14.1071   d.f. = 1  p-value =   0.0002
+ - one-sided (normal variate):  -3.7559
+
+(3) tested separately:
+-----------------------
+ - two-sided:
+  c =   5.9660   d.f. = 1  p-value =   0.0146
+ - one-sided (normal variate):  -2.4425    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)          6.7122
+rate:  constant friendship rate (period 2)          5.9811
+eval:  outdegree (density)                         -0.9366
+eval:  reciprocity                                  2.3270
+eval:  transitive triplets                          0.5491
+eval:  3-cycles                                    -0.3999
+eval:  indegree - popularity (sqrt)                -0.1418
+eval:  indegree - activity (sqrt)                  -0.6985
+eval:  outdegree - activity (sqrt)                  0.0986
+eval:  Dummy2:friendship ego                       -0.2278
+
+Total computation time 103.15 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 14:08:44
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 19084.
+Effects object used: Model3a 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  3-cycles                                        0.0000
+  7. eval:  indegree - popularity (sqrt)                    0.0000  (fixed) 
+  8. eval:  indegree - activity (sqrt)                      0.0000
+  9. eval:  outdegree - activity (sqrt)                     0.0000  (fixed) 
+ 10. eval:  Dummy2:friendship ego                           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Sum of indegrees x sqrt(indegree)                                 1701.7756
+  8. Sum of outdegrees x sqrt(indegree)                                1591.0573
+  9. Sum of outdegrees^(1.5)                                           1883.8760
+ 10. Sum of outdegrees x Dummy2:friendship                              -10.0000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3871 iterations.
+Parameter estimates based on 871 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.  -0.3170  12.7425  -0.0249                      
+  2.  -0.3770  12.1008  -0.0312                      
+  3.   0.0540  19.8925   0.0027                      
+  4.   0.7013  19.3619   0.0362                      
+  5.  -0.4180 118.0361  -0.0035                      
+  6.  -0.2423  36.0382  -0.0067                      
+  7.  18.1767  69.6834   0.2608     (fixed parameter)
+  8.   1.6736  66.7326   0.0251                      
+  9.  -2.6594  70.7431  -0.0376     (fixed parameter)
+ 10.   0.2180  10.0163   0.0218                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3871 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           6.3184  (   0.6661)
+ 2. rate:  constant friendship rate (period 2)           5.7746  (   0.6852)
+ 3. eval:  outdegree (density)                          -1.0107  (   0.4906)
+ 4. eval:  reciprocity                                   2.4168  (   0.2125)
+ 5. eval:  transitive triplets                           0.5539  (   0.0509)
+ 6. eval:  3-cycles                                     -0.4087  (   0.1126)
+ 7. eval:  indegree - popularity (sqrt)                  0.0000  (  fixed  )
+ 8. eval:  indegree - activity (sqrt)                   -0.6897  (   0.2316)
+ 9. eval:  outdegree - activity (sqrt)                   0.0000  (  fixed  )
+10. eval:  Dummy2:friendship ego                        -0.2761  (   0.1172)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.444      0.055     -0.101     -0.013     -0.003     -0.003         NA      0.050         NA      0.005
+     0.120      0.470     -0.114     -0.007     -0.004     -0.004         NA      0.058         NA      0.010
+    -0.310     -0.339      0.241     -0.002      0.000      0.019         NA     -0.111         NA     -0.002
+    -0.091     -0.046     -0.021      0.045      0.006     -0.016         NA     -0.005         NA     -0.002
+    -0.100     -0.127     -0.008      0.562      0.003     -0.005         NA     -0.001         NA     -0.001
+    -0.042     -0.048      0.337     -0.667     -0.797      0.013         NA     -0.007         NA      0.001
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+     0.326      0.368     -0.980     -0.101     -0.108     -0.266         NA      0.054         NA      0.002
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+     0.068      0.119     -0.028     -0.078     -0.151      0.057         NA      0.057         NA      0.014
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  indegree - popularity (sqrt)                =   0.0000
+ (2)   eval:  outdegree - activity (sqrt)                 =   0.0000
+_________________________________________________
+                   
+Joint test:
+-----------
+   c =   1.5424   d.f. = 2   p-value =   0.4625
+
+(1) tested separately:
+-----------------------
+ - two-sided:
+  c =   1.5055   d.f. = 1  p-value =   0.2198
+ - one-sided (normal variate):  -1.2270
+
+(2) tested separately:
+-----------------------
+ - two-sided:
+  c =   0.0815   d.f. = 1  p-value =   0.7752
+ - one-sided (normal variate):   0.2855    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)          6.3839
+rate:  constant friendship rate (period 2)          5.7618
+eval:  outdegree (density)                         -0.5692
+eval:  reciprocity                                  2.3834
+eval:  transitive triplets                          0.5671
+eval:  3-cycles                                    -0.4039
+eval:  indegree - popularity (sqrt)                -0.1340
+eval:  indegree - activity (sqrt)                  -0.7652
+eval:  outdegree - activity (sqrt)                  0.0160
+eval:  Dummy2:friendship ego                       -0.2654
+
+Total computation time 122.68 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 15:00:04
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 769902.
+Effects object used: Model3b 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  3-cycles                                        0.0000
+  7. eval:  balance                                         0.0000  (fixed) 
+  8. eval:  indegree - popularity (sqrt)                    0.0000  (fixed) 
+  9. eval:  indegree - activity (sqrt)                      0.0000
+ 10. eval:  outdegree - activity (sqrt)                     0.0000  (fixed) 
+ 11. eval:  Dummy2:friendship ego                           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Amount of balance                                                 1720.8219
+  8. Sum of indegrees x sqrt(indegree)                                 1701.7756
+  9. Sum of outdegrees x sqrt(indegree)                                1591.0573
+ 10. Sum of outdegrees^(1.5)                                           1883.8760
+ 11. Sum of outdegrees x Dummy2:friendship                              -10.0000
+
+ 11 parameters, 11 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3799 iterations.
+Parameter estimates based on 799 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.    0.4847  12.9588   0.0374                      
+  2.    0.1793  12.0563   0.0149                      
+  3.   -4.2920  21.2582  -0.2019                      
+  4.    0.0107  19.2471   0.0006                      
+  5.    3.0223 114.1832   0.0265                      
+  6.    0.1547  34.3451   0.0045                      
+  7. -218.2827 135.2375  -1.6141     (fixed parameter)
+  8.   14.6107  73.5412   0.1987     (fixed parameter)
+  9.   19.4809  69.9211   0.2786                      
+ 10.    0.5996  74.7134   0.0080     (fixed parameter)
+ 11.   -0.3533  10.5673  -0.0334                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3799 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           6.6786  (   0.6743)
+ 2. rate:  constant friendship rate (period 2)           6.0777  (   0.6148)
+ 3. eval:  outdegree (density)                          -1.8973  (   0.3687)
+ 4. eval:  reciprocity                                   2.3183  (   0.2015)
+ 5. eval:  transitive triplets                           0.5475  (   0.0486)
+ 6. eval:  3-cycles                                     -0.4563  (   0.1073)
+ 7. eval:  balance                                       0.0000  (  fixed  )
+ 8. eval:  indegree - popularity (sqrt)                  0.0000  (  fixed  )
+ 9. eval:  indegree - activity (sqrt)                   -0.2614  (   0.1728)
+10. eval:  outdegree - activity (sqrt)                   0.0000  (  fixed  )
+11. eval:  Dummy2:friendship ego                        -0.2657  (   0.1065)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.455      0.019     -0.039     -0.006     -0.004      0.002         NA         NA      0.020         NA      0.006
+     0.046      0.378     -0.028     -0.010     -0.005      0.007         NA         NA      0.017         NA      0.005
+    -0.158     -0.124      0.136     -0.008      0.000      0.010         NA         NA     -0.062         NA      0.001
+    -0.045     -0.079     -0.104      0.041      0.005     -0.015         NA         NA     -0.001         NA     -0.002
+    -0.130     -0.166      0.002      0.550      0.002     -0.004         NA         NA     -0.001         NA     -0.001
+     0.031      0.105      0.242     -0.705     -0.817      0.012         NA         NA     -0.003         NA      0.001
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+     0.175      0.160     -0.971     -0.042     -0.143     -0.151         NA         NA      0.030         NA      0.000
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+     0.088      0.069      0.021     -0.105     -0.119      0.063         NA         NA      0.015         NA      0.011
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  balance                                     =   0.0000
+ (2)   eval:  indegree - popularity (sqrt)                =   0.0000
+ (3)   eval:  outdegree - activity (sqrt)                 =   0.0000
+_________________________________________________
+                   
+Joint test:
+-----------
+   c =   2.6941   d.f. = 3   p-value =   0.4412
+
+(1) tested separately:
+-----------------------
+ - two-sided:
+  c =   0.1791   d.f. = 1  p-value =   0.6722
+ - one-sided (normal variate):   0.4231
+
+(2) tested separately:
+-----------------------
+ - two-sided:
+  c =   1.8280   d.f. = 1  p-value =   0.1764
+ - one-sided (normal variate):  -1.3521
+
+(3) tested separately:
+-----------------------
+ - two-sided:
+  c =   0.2133   d.f. = 1  p-value =   0.6442
+ - one-sided (normal variate):   0.4618    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)         19.8771
+rate:  constant friendship rate (period 2)         17.6387
+eval:  outdegree (density)                        -55.4560
+eval:  reciprocity                                 -2.5745
+eval:  transitive triplets                         -5.1975
+eval:  3-cycles                                     1.4885
+eval:  balance                                      2.3110
+eval:  indegree - popularity (sqrt)                 4.8725
+eval:  indegree - activity (sqrt)                   8.1453
+eval:  outdegree - activity (sqrt)                 10.7611
+eval:  Dummy2:friendship ego                        0.3098
+
+Total computation time 177.12 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 15:11:35
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 711403.
+Effects object used: Model3b 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  3-cycles                                        0.0000
+  7. eval:  indegree - popularity (sqrt)                    0.0000
+  8. eval:  indegree - activity (sqrt)                      0.0000
+  9. eval:  outdegree - activity (sqrt)                     0.0000  (fixed) 
+ 10. eval:  Dummy2:friendship ego                           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Sum of indegrees x sqrt(indegree)                                 1701.7756
+  8. Sum of outdegrees x sqrt(indegree)                                1591.0573
+  9. Sum of outdegrees^(1.5)                                           1883.8760
+ 10. Sum of outdegrees x Dummy2:friendship                              -10.0000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3771 iterations.
+Parameter estimates based on 771 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.   0.2203  12.8945   0.0171                      
+  2.  -0.6927  11.6478  -0.0595                      
+  3.  -0.1550  19.5870  -0.0079                      
+  4.  -0.2220  19.0127  -0.0117                      
+  5.  -5.1050 116.4068  -0.0439                      
+  6.  -1.4183  35.3265  -0.0401                      
+  7.  -1.2586  67.8517  -0.0185                      
+  8.   2.0091  65.2671   0.0308                      
+  9.  -0.6034  69.2893  -0.0087     (fixed parameter)
+ 10.  -0.2105   9.4009  -0.0224                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3771 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           6.4074  (   0.6263)
+ 2. rate:  constant friendship rate (period 2)           5.7742  (   0.6521)
+ 3. eval:  outdegree (density)                          -0.5487  (   0.6076)
+ 4. eval:  reciprocity                                   2.3765  (   0.2209)
+ 5. eval:  transitive triplets                           0.5725  (   0.0535)
+ 6. eval:  3-cycles                                     -0.4198  (   0.1138)
+ 7. eval:  indegree - popularity (sqrt)                 -0.1661  (   0.1266)
+ 8. eval:  indegree - activity (sqrt)                   -0.7133  (   0.2711)
+ 9. eval:  outdegree - activity (sqrt)                   0.0000  (  fixed  )
+10. eval:  Dummy2:friendship ego                        -0.2608  (   0.1153)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.392      0.061     -0.129     -0.025     -0.006     -0.001     -0.006      0.074         NA      0.003
+     0.150      0.425     -0.113     -0.013     -0.007      0.001     -0.006      0.064         NA      0.005
+    -0.340     -0.286      0.369     -0.007      0.006      0.016     -0.030     -0.139         NA      0.003
+    -0.178     -0.087     -0.053      0.049      0.006     -0.017      0.007     -0.011         NA     -0.001
+    -0.173     -0.188      0.194      0.517      0.003     -0.005     -0.001     -0.004         NA      0.000
+    -0.013      0.015      0.238     -0.657     -0.760      0.013     -0.001     -0.005         NA      0.000
+    -0.079     -0.067     -0.391      0.261     -0.087     -0.049      0.016     -0.005         NA     -0.002
+     0.436      0.364     -0.843     -0.191     -0.259     -0.164     -0.138      0.074         NA      0.002
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+     0.036      0.063      0.041     -0.045     -0.058     -0.011     -0.142      0.050         NA      0.013
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  outdegree - activity (sqrt)                 =   0.0000
+_________________________________________________
+                   
+   c =   0.0124   d.f. = 1   p-value =   0.9114
+   one-sided (normal variate):   0.1112    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)          6.3374
+rate:  constant friendship rate (period 2)          5.7601
+eval:  outdegree (density)                         -0.4888
+eval:  reciprocity                                  2.3970
+eval:  transitive triplets                          0.5745
+eval:  3-cycles                                    -0.4126
+eval:  indegree - popularity (sqrt)                -0.1526
+eval:  indegree - activity (sqrt)                  -0.7829
+eval:  outdegree - activity (sqrt)                  0.0135
+eval:  Dummy2:friendship ego                       -0.2617
+
+Total computation time 141.68 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 16:17:26
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 402010.
+Effects object used: Model3 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  3-cycles                                        0.0000
+  7. eval:  transitive ties                                 0.0000  (fixed) 
+  8. eval:  number of actors at distance 2                  0.0000  (fixed) 
+  9. eval:  WCDyads                                         0.0000  (fixed) 
+ 10. eval:  Dummy2:friendship ego                           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Number of ties with transitive closure                             585.0000
+  8. Number of directed distances equal to 2                           1481.0000
+  9. Sum of ties x WCDyads                                              281.9870
+ 10. Sum of outdegrees x Dummy2:friendship                              -10.0000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3619 iterations.
+Parameter estimates based on 619 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.   0.4240  12.6778   0.0334                      
+  2.  -0.0007  12.0557  -0.0001                      
+  3.   1.5347  21.7702   0.0705                      
+  4.   1.7893  19.0052   0.0941                      
+  5.   8.1033 111.6613   0.0726                      
+  6.   2.5730  33.2913   0.0773                      
+  7. -55.5317  26.0159  -2.1345     (fixed parameter)
+  8. 255.7640 100.9636   2.5332     (fixed parameter)
+  9.   5.0604   8.2723   0.6117     (fixed parameter)
+ 10.  -0.0013  10.7359  -0.0001                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3619 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           6.7541  (   0.6596)
+ 2. rate:  constant friendship rate (period 2)           6.1371  (   0.6140)
+ 3. eval:  outdegree (density)                          -2.3907  (   0.0797)
+ 4. eval:  reciprocity                                   2.2183  (   0.1839)
+ 5. eval:  transitive triplets                           0.5250  (   0.0484)
+ 6. eval:  3-cycles                                     -0.4527  (   0.1030)
+ 7. eval:  transitive ties                               0.0000  (  fixed  )
+ 8. eval:  number of actors at distance 2                0.0000  (  fixed  )
+ 9. eval:  WCDyads                                       0.0000  (  fixed  )
+10. eval:  Dummy2:friendship ego                        -0.2625  (   0.1012)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.435     -0.004      0.003     -0.010     -0.003      0.005         NA         NA         NA      0.008
+    -0.010      0.377      0.002      0.004      0.000     -0.001         NA         NA         NA      0.001
+     0.053      0.037      0.006     -0.008     -0.002      0.003         NA         NA         NA      0.001
+    -0.085      0.038     -0.560      0.034      0.004     -0.012         NA         NA         NA     -0.001
+    -0.091     -0.009     -0.547      0.475      0.002     -0.004         NA         NA         NA      0.000
+     0.067     -0.023      0.372     -0.653     -0.862      0.011         NA         NA         NA      0.000
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+     0.119      0.009      0.118     -0.036     -0.100      0.009         NA         NA         NA      0.010
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  transitive ties                             =   0.0000
+ (2)   eval:  number of actors at distance 2              =   0.0000
+ (3)   eval:  WCDyads                                     =   0.0000
+_________________________________________________
+                   
+Joint test:
+-----------
+   c =  49.4152   d.f. = 3   p-value < 0.0001
+
+(1) tested separately:
+-----------------------
+ - two-sided:
+  c =  27.9860   d.f. = 1  p-value < 0.0001
+ - one-sided (normal variate):   5.2902
+
+(2) tested separately:
+-----------------------
+ - two-sided:
+  c =  25.8476   d.f. = 1  p-value < 0.0001
+ - one-sided (normal variate):  -5.0840
+
+(3) tested separately:
+-----------------------
+ - two-sided:
+  c =   0.9065   d.f. = 1  p-value =   0.3411
+ - one-sided (normal variate):  -0.9521    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)          7.1569
+rate:  constant friendship rate (period 2)          6.3088
+eval:  outdegree (density)                         -2.0885
+eval:  reciprocity                                  1.9796
+eval:  transitive triplets                          0.2592
+eval:  3-cycles                                    -0.3261
+eval:  transitive ties                              0.7788
+eval:  number of actors at distance 2              -0.1591
+eval:  WCDyads                                     -0.1740
+eval:  Dummy2:friendship ego                       -0.1981
+
+Total computation time 141.65 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 16:24:54
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 201981.
+Effects object used: Model3a 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  3-cycles                                        0.0000
+  7. eval:  transitive ties                                 0.0000
+  8. eval:  number of actors at distance 2                  0.0000  (fixed) 
+  9. eval:  WCDyads                                         0.0000  (fixed) 
+ 10. eval:  Dummy2:friendship ego                           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Number of ties with transitive closure                             585.0000
+  8. Number of directed distances equal to 2                           1481.0000
+  9. Sum of ties x WCDyads                                              281.9870
+ 10. Sum of outdegrees x Dummy2:friendship                              -10.0000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3875 iterations.
+Parameter estimates based on 875 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.  -0.8080  12.7262  -0.0635                      
+  2.   0.1727  12.1173   0.0142                      
+  3.  -0.1133  22.6788  -0.0050                      
+  4.  -0.6160  18.8921  -0.0326                      
+  5.  -1.9520 100.4935  -0.0194                      
+  6.  -0.5367  29.7474  -0.0180                      
+  7.  -1.0660  26.2564  -0.0406                      
+  8. 197.7467 102.7859   1.9239     (fixed parameter)
+  9.   5.3749   8.3135   0.6465     (fixed parameter)
+ 10.   0.0200  11.4045   0.0018                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3875 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           6.7921  (   0.6712)
+ 2. rate:  constant friendship rate (period 2)           6.1258  (   0.6140)
+ 3. eval:  outdegree (density)                          -2.8515  (   0.1446)
+ 4. eval:  reciprocity                                   2.0611  (   0.1902)
+ 5. eval:  transitive triplets                           0.3771  (   0.0521)
+ 6. eval:  3-cycles                                     -0.3797  (   0.0982)
+ 7. eval:  transitive ties                               0.9171  (   0.1997)
+ 8. eval:  number of actors at distance 2                0.0000  (  fixed  )
+ 9. eval:  WCDyads                                       0.0000  (  fixed  )
+10. eval:  Dummy2:friendship ego                        -0.2262  (   0.0943)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.451     -0.011      0.004     -0.001      0.001      0.000     -0.009         NA         NA      0.005
+    -0.026      0.377      0.006      0.001      0.000      0.001     -0.006         NA         NA      0.002
+     0.041      0.069      0.021     -0.008      0.001      0.003     -0.023         NA         NA      0.000
+    -0.008      0.008     -0.307      0.036      0.004     -0.013     -0.001         NA         NA      0.000
+     0.017     -0.011      0.103      0.448      0.003     -0.004     -0.005         NA         NA      0.000
+    -0.004      0.020      0.184     -0.688     -0.766      0.010      0.002         NA         NA      0.000
+    -0.064     -0.047     -0.810     -0.030     -0.523      0.082      0.040         NA         NA      0.001
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+     0.080      0.043     -0.007      0.017     -0.040     -0.032      0.043         NA         NA      0.009
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  number of actors at distance 2              =   0.0000
+ (2)   eval:  WCDyads                                     =   0.0000
+_________________________________________________
+                   
+Joint test:
+-----------
+   c =  15.3837   d.f. = 2   p-value =   0.0005
+
+(1) tested separately:
+-----------------------
+ - two-sided:
+  c =  14.8398   d.f. = 1  p-value =   0.0001
+ - one-sided (normal variate):  -3.8522
+
+(2) tested separately:
+-----------------------
+ - two-sided:
+  c =   0.9845   d.f. = 1  p-value =   0.3211
+ - one-sided (normal variate):  -0.9922    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)          7.4203
+rate:  constant friendship rate (period 2)          6.3401
+eval:  outdegree (density)                         -2.1253
+eval:  reciprocity                                  1.9369
+eval:  transitive triplets                          0.2668
+eval:  3-cycles                                    -0.3184
+eval:  transitive ties                              0.8138
+eval:  number of actors at distance 2              -0.1683
+eval:  WCDyads                                     -0.1656
+eval:  Dummy2:friendship ego                       -0.1912
+
+Total computation time 167.69 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 16:56:49
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 462615.
+Effects object used: Model3b 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  transitive reciprocated triplets                0.0000  (fixed) 
+  7. eval:  3-cycles                                        0.0000
+  8. eval:  transitive ties                                 0.0000
+  9. eval:  number of actors at distance 2                  0.0000  (fixed) 
+ 10. eval:  Dummy2:friendship ego                           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. Number of transitive reciprocated triplets                         730.0000
+  7. 3-cycles                                                           299.0000
+  8. Number of ties with transitive closure                             585.0000
+  9. Number of directed distances equal to 2                           1481.0000
+ 10. Sum of outdegrees x Dummy2:friendship                              -10.0000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3858 iterations.
+Parameter estimates based on 858 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.   0.1333  13.2500   0.0101                      
+  2.   0.7053  12.3035   0.0573                      
+  3.   1.1080  22.6167   0.0490                      
+  4.   0.6620  18.6722   0.0355                      
+  5.   3.2443  98.9491   0.0328                      
+  6.  27.6967  79.9254   0.3465     (fixed parameter)
+  7.   1.2040  29.2727   0.0411                      
+  8.   0.4513  25.8251   0.0175                      
+  9. 203.8750 103.4346   1.9711     (fixed parameter)
+ 10.   0.1493  11.2865   0.0132                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3858 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           6.8296  (   0.6525)
+ 2. rate:  constant friendship rate (period 2)           6.1483  (   0.6361)
+ 3. eval:  outdegree (density)                          -2.8510  (   0.1406)
+ 4. eval:  reciprocity                                   2.0661  (   0.1984)
+ 5. eval:  transitive triplets                           0.3781  (   0.0520)
+ 6. eval:  transitive reciprocated triplets              0.0000  (  fixed  )
+ 7. eval:  3-cycles                                     -0.3812  (   0.1000)
+ 8. eval:  transitive ties                               0.9168  (   0.1914)
+ 9. eval:  number of actors at distance 2                0.0000  (  fixed  )
+10. eval:  Dummy2:friendship ego                        -0.2263  (   0.0954)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.426     -0.007      0.006      0.005      0.001         NA     -0.002     -0.013         NA      0.006
+    -0.016      0.405      0.012      0.000      0.001         NA      0.001     -0.015         NA      0.000
+     0.070      0.137      0.020     -0.008      0.001         NA      0.002     -0.022         NA      0.000
+     0.036     -0.002     -0.290      0.039      0.005         NA     -0.014     -0.002         NA     -0.001
+     0.022      0.044      0.110      0.450      0.003         NA     -0.004     -0.005         NA      0.000
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+    -0.026      0.013      0.155     -0.709     -0.774         NA      0.010      0.002         NA      0.000
+    -0.106     -0.127     -0.806     -0.040     -0.518         NA      0.103      0.037         NA      0.001
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+     0.102      0.002     -0.017     -0.041     -0.096         NA      0.025      0.075         NA      0.009
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  transitive reciprocated triplets            =   0.0000
+ (2)   eval:  number of actors at distance 2              =   0.0000
+_________________________________________________
+                   
+Joint test:
+-----------
+   c =  20.2875   d.f. = 2   p-value < 0.0001
+
+(1) tested separately:
+-----------------------
+ - two-sided:
+  c =   3.4376   d.f. = 1  p-value =   0.0637
+ - one-sided (normal variate):  -1.8541
+
+(2) tested separately:
+-----------------------
+ - two-sided:
+  c =  14.9814   d.f. = 1  p-value =   0.0001
+ - one-sided (normal variate):  -3.8706    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)          7.5332
+rate:  constant friendship rate (period 2)          6.2189
+eval:  outdegree (density)                         -2.2424
+eval:  reciprocity                                  2.1479
+eval:  transitive triplets                          0.3155
+eval:  transitive reciprocated triplets            -0.1923
+eval:  3-cycles                                    -0.2032
+eval:  transitive ties                              0.8127
+eval:  number of actors at distance 2              -0.1700
+eval:  Dummy2:friendship ego                       -0.1763
+
+Total computation time 165.35 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 17:03:36
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 865843.
+Effects object used: Model3c 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  transitive reciprocated triplets                0.0000  (fixed) 
+  7. eval:  3-cycles                                        0.0000
+  8. eval:  transitive ties                                 0.0000
+  9. eval:  number of actors at distance 2                  0.0000
+ 10. eval:  Dummy2:friendship ego                           0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. Number of transitive reciprocated triplets                         730.0000
+  7. 3-cycles                                                           299.0000
+  8. Number of ties with transitive closure                             585.0000
+  9. Number of directed distances equal to 2                           1481.0000
+ 10. Sum of outdegrees x Dummy2:friendship                              -10.0000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3668 iterations.
+Parameter estimates based on 668 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.   0.0780  13.0051   0.0060                      
+  2.  -0.2280  12.0774  -0.0189                      
+  3.   3.3120  20.6257   0.1606                      
+  4.   1.6527  19.2420   0.0859                      
+  5.   5.6627 103.6825   0.0546                      
+  6.  37.5613  87.2446   0.4305     (fixed parameter)
+  7.   2.7847  31.7951   0.0876                      
+  8.  -0.3393  24.7947  -0.0137                      
+  9.  -2.5343  84.4731  -0.0300                      
+ 10.  -0.5347  10.2940  -0.0519                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3668 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           7.2207  (   0.6848)
+ 2. rate:  constant friendship rate (period 2)           6.2551  (   0.6322)
+ 3. eval:  outdegree (density)                          -2.1359  (   0.1898)
+ 4. eval:  reciprocity                                   2.0139  (   0.1893)
+ 5. eval:  transitive triplets                           0.2689  (   0.0560)
+ 6. eval:  transitive reciprocated triplets              0.0000  (  fixed  )
+ 7. eval:  3-cycles                                     -0.3220  (   0.0979)
+ 8. eval:  transitive ties                               0.7502  (   0.1950)
+ 9. eval:  number of actors at distance 2               -0.1883  (   0.0414)
+10. eval:  Dummy2:friendship ego                        -0.2035  (   0.1020)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.469     -0.014      0.009      0.001      0.004         NA     -0.004     -0.016      0.000      0.003
+    -0.033      0.400      0.000      0.008      0.004         NA     -0.003     -0.013      0.003      0.002
+     0.067     -0.003      0.036     -0.006     -0.002         NA      0.003     -0.025     -0.005      0.001
+     0.008      0.071     -0.157      0.036      0.005         NA     -0.013     -0.005      0.000     -0.001
+     0.098      0.099     -0.155      0.470      0.003         NA     -0.004     -0.005      0.001      0.000
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+    -0.063     -0.052      0.170     -0.700     -0.782         NA      0.010      0.002      0.000      0.000
+    -0.118     -0.103     -0.684     -0.124     -0.434         NA      0.113      0.038      0.002      0.000
+    -0.002      0.107     -0.690     -0.039      0.293         NA     -0.063      0.194      0.002      0.000
+     0.042      0.025      0.048     -0.033     -0.057         NA     -0.002      0.021     -0.050      0.010
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  transitive reciprocated triplets            =   0.0000
+_________________________________________________
+                   
+   c =   4.5252   d.f. = 1   p-value =   0.0334
+   one-sided (normal variate):  -2.1273    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)          7.3338
+rate:  constant friendship rate (period 2)          6.2419
+eval:  outdegree (density)                         -2.3067
+eval:  reciprocity                                  2.2602
+eval:  transitive triplets                          0.3419
+eval:  transitive reciprocated triplets            -0.2370
+eval:  3-cycles                                    -0.1741
+eval:  transitive ties                              0.7459
+eval:  number of actors at distance 2              -0.1729
+eval:  Dummy2:friendship ego                       -0.1758
+
+Total computation time 157.5 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 17:07:59
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 51985.
+Effects object used: Model3c 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             6.7541
+  2. rate:  constant friendship rate (period 2)             6.1371
+  3. eval:  outdegree (density)                            -2.3907
+  4. eval:  reciprocity                                     2.2183
+  5. eval:  transitive triplets                             0.5250
+  6. eval:  transitive reciprocated triplets                0.0000  (fixed) 
+  7. eval:  3-cycles                                       -0.4527
+  8. eval:  transitive ties                                 0.0000
+  9. eval:  number of actors at distance 2                  0.0000
+ 10. eval:  Dummy2:friendship ego                          -0.2625
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. Number of transitive reciprocated triplets                         730.0000
+  7. 3-cycles                                                           299.0000
+  8. Number of ties with transitive closure                             585.0000
+  9. Number of directed distances equal to 2                           1481.0000
+ 10. Sum of outdegrees x Dummy2:friendship                              -10.0000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3823 iterations.
+Parameter estimates based on 823 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.   0.5107  12.6045   0.0405                      
+  2.  -0.1393  11.7293  -0.0119                      
+  3.   0.3240  20.7124   0.0156                      
+  4.   0.5440  19.0328   0.0286                      
+  5.   5.0997  99.9323   0.0510                      
+  6.  30.6943  83.6069   0.3671     (fixed parameter)
+  7.   0.0513  30.6361   0.0017                      
+  8.  -0.1140  24.9755  -0.0046                      
+  9.   0.7177  85.6778   0.0084                      
+ 10.  -0.2093  10.4858  -0.0200                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3823 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           7.2718  (   0.7094)
+ 2. rate:  constant friendship rate (period 2)           6.2987  (   0.6589)
+ 3. eval:  outdegree (density)                          -2.2491  (   0.1952)
+ 4. eval:  reciprocity                                   2.0372  (   0.1890)
+ 5. eval:  transitive triplets                           0.2874  (   0.0514)
+ 6. eval:  transitive reciprocated triplets              0.0000  (  fixed  )
+ 7. eval:  3-cycles                                     -0.3466  (   0.0944)
+ 8. eval:  transitive ties                               0.8006  (   0.1899)
+ 9. eval:  number of actors at distance 2               -0.1672  (   0.0387)
+10. eval:  Dummy2:friendship ego                        -0.2041  (   0.1012)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.503      0.014      0.015     -0.001      0.003         NA     -0.003     -0.023      0.000      0.001
+     0.029      0.434      0.003      0.008      0.001         NA     -0.001     -0.010      0.002      0.002
+     0.109      0.023      0.038     -0.007     -0.003         NA      0.005     -0.027     -0.005      0.001
+    -0.010      0.067     -0.199      0.036      0.005         NA     -0.012     -0.003      0.000     -0.002
+     0.087      0.037     -0.251      0.467      0.003         NA     -0.004     -0.003      0.001      0.000
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+    -0.040     -0.011      0.270     -0.690     -0.770         NA      0.009      0.000     -0.001      0.000
+    -0.173     -0.082     -0.715     -0.082     -0.303         NA     -0.022      0.036      0.002      0.001
+     0.010      0.064     -0.702      0.023      0.353         NA     -0.139      0.238      0.002      0.000
+     0.019      0.024      0.025     -0.082     -0.063         NA      0.008      0.034      0.025      0.010
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  transitive reciprocated triplets            =   0.0000
+_________________________________________________
+                   
+   c =   4.7329   d.f. = 1   p-value =   0.0296
+   one-sided (normal variate):  -2.1755    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)          7.2313
+rate:  constant friendship rate (period 2)          6.1667
+eval:  outdegree (density)                         -2.3263
+eval:  reciprocity                                  2.2753
+eval:  transitive triplets                          0.3390
+eval:  transitive reciprocated triplets            -0.2413
+eval:  3-cycles                                    -0.1690
+eval:  transitive ties                              0.7619
+eval:  number of actors at distance 2              -0.1684
+eval:  Dummy2:friendship ego                       -0.1635
+
+Total computation time 172.8 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 20:45:15
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 52203.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 20:46:00
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 584289.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 20:49:20
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 765997.
+Effects object used: Model3d 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  transitive reciprocated triplets                0.0000  (fixed) 
+  7. eval:  3-cycles                                        0.0000
+  8. eval:  transitive ties                                 0.0000
+  9. eval:  number of actors at distance 2                  0.0000
+ 10. eval:  Dummy2:friendship ego                           0.0000
+ 11. eval:  int.  Dummy2:friendship ego x reciprocity       0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. Number of transitive reciprocated triplets                         730.0000
+  7. 3-cycles                                                           299.0000
+  8. Number of ties with transitive closure                             585.0000
+  9. Number of directed distances equal to 2                           1481.0000
+ 10. Sum of outdegrees x Dummy2:friendship                              -10.0000
+ 11. int.  Dummy2:friendship ego x reciprocity                           -5.0000
+
+ 11 parameters, 11 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3896 iterations.
+Parameter estimates based on 896 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.  -0.2257  12.6556  -0.0178                      
+  2.  -0.2567  11.5198  -0.0223                      
+  3.   2.3677  20.9124   0.1132                      
+  4.   1.3020  18.8490   0.0691                      
+  5.   6.7197 103.5408   0.0649                      
+  6.  34.7017  85.7803   0.4045     (fixed parameter)
+  7.   2.1930  31.3005   0.0701                      
+  8.   0.1693  25.2594   0.0067                      
+  9.  -6.9097  81.7087  -0.0846                      
+ 10.   0.1302  10.0958   0.0129                      
+ 11.   0.0877   9.3970   0.0093                      
+
+Good convergence is indicated by the t-ratios of non-fixed parameters being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3896 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           7.1757  (   0.7687)
+ 2. rate:  constant friendship rate (period 2)           6.3018  (   0.6678)
+ 3. eval:  outdegree (density)                          -2.1687  (   0.1985)
+ 4. eval:  reciprocity                                   2.0108  (   0.1872)
+ 5. eval:  transitive triplets                           0.2676  (   0.0523)
+ 6. eval:  transitive reciprocated triplets              0.0000  (  fixed  )
+ 7. eval:  3-cycles                                     -0.3145  (   0.0952)
+ 8. eval:  transitive ties                               0.7704  (   0.1912)
+ 9. eval:  number of actors at distance 2               -0.1841  (   0.0392)
+10. eval:  Dummy2:friendship ego                        -0.2749  (   0.1355)
+11. eval:  int.  Dummy2:friendship ego x reciprocity     0.1939  (   0.2734)
+
+@3
+Covariance matrices
+                   
+(Values of the covariance matrix of estimates
+  are meaningless for the fixed parameters.)
+
+Covariance matrix of estimates (correlations below diagonal):
+     0.591      0.000      0.024     -0.002      0.002         NA     -0.003     -0.025     -0.002     -0.001      0.006
+     0.001      0.446      0.014     -0.008      0.001         NA      0.002     -0.017      0.000      0.007     -0.010
+     0.154      0.107      0.039     -0.010     -0.002         NA      0.006     -0.027     -0.006      0.007     -0.013
+    -0.013     -0.064     -0.281      0.035      0.004         NA     -0.012      0.001      0.001     -0.003      0.003
+     0.061      0.029     -0.241      0.423      0.003         NA     -0.004     -0.003      0.001      0.000      0.000
+        NA         NA         NA         NA         NA         NA         NA         NA         NA         NA         NA
+    -0.040      0.030      0.293     -0.686     -0.747         NA      0.009     -0.001     -0.001      0.000      0.001
+    -0.169     -0.134     -0.707      0.017     -0.332         NA     -0.043      0.037      0.002     -0.003      0.006
+    -0.055      0.016     -0.720      0.083      0.383         NA     -0.187      0.258      0.002     -0.001      0.002
+    -0.009      0.081      0.245     -0.125     -0.048         NA     -0.007     -0.105     -0.153      0.018     -0.024
+     0.027     -0.056     -0.230      0.060     -0.004         NA      0.039      0.120      0.143     -0.657      0.075
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+@2
+Generalised score test <c>
+--------------------------
+
+Testing the goodness-of-fit of the model restricted by
+ (1)   eval:  transitive reciprocated triplets            =   0.0000
+_________________________________________________
+                   
+   c =   4.4623   d.f. = 1   p-value =   0.0347
+   one-sided (normal variate):  -2.1124    
+_________________________________________________
+
+One-step estimates: 
+
+rate:  constant friendship rate (period 1)          7.1925
+rate:  constant friendship rate (period 2)          6.2219
+eval:  outdegree (density)                         -2.3410
+eval:  reciprocity                                  2.2336
+eval:  transitive triplets                          0.3294
+eval:  transitive reciprocated triplets            -0.2217
+eval:  3-cycles                                    -0.1658
+eval:  transitive ties                              0.7810
+eval:  number of actors at distance 2              -0.1639
+eval:  Dummy2:friendship ego                       -0.2847
+eval:  int.  Dummy2:friendship ego x reciprocity    0.3121
+
+Total computation time 194.64 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 20:56:02
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 520141.
+Effects object used: Model3d 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)             7.2014
+  2. rate:  constant friendship rate (period 2)             6.0736
+  3. eval:  outdegree (density)                            -1.2754
+  4. eval:  reciprocity                                     0.0000
+  5. eval:  transitive triplets                             0.0000
+  6. eval:  3-cycles                                        0.0000
+  7. eval:  transitive ties                                 0.0000
+  8. eval:  number of actors at distance 2                  0.0000
+  9. eval:  Dummy2:friendship ego                           0.0000
+ 10. eval:  int.  Dummy2:friendship ego x reciprocity       0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Number of ties with transitive closure                             585.0000
+  8. Number of directed distances equal to 2                           1481.0000
+  9. Sum of outdegrees x Dummy2:friendship                              -10.0000
+ 10. int.  Dummy2:friendship ego x reciprocity                           -5.0000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3873 iterations.
+Parameter estimates based on 873 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.  -0.0117  12.9003  -0.0009 
+  2.   0.2337  11.8347   0.0197 
+  3.   1.1780  20.6023   0.0572 
+  4.   0.5220  18.7497   0.0278 
+  5.   1.9597 100.0547   0.0196 
+  6.   0.8430  30.5818   0.0276 
+  7.   0.1867  24.5726   0.0076 
+  8.  -3.2327  85.1243  -0.0380 
+  9.   0.7387  10.4125   0.0709 
+ 10.   0.3817   9.6223   0.0397 
+
+Good convergence is indicated by the t-ratios being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3873 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           7.2235  (   0.7128)
+ 2. rate:  constant friendship rate (period 2)           6.3523  (   0.6551)
+ 3. eval:  outdegree (density)                          -2.2084  (   0.1946)
+ 4. eval:  reciprocity                                   2.0108  (   0.1878)
+ 5. eval:  transitive triplets                           0.2705  (   0.0520)
+ 6. eval:  3-cycles                                     -0.3185  (   0.0983)
+ 7. eval:  transitive ties                               0.7947  (   0.1820)
+ 8. eval:  number of actors at distance 2               -0.1762  (   0.0420)
+ 9. eval:  Dummy2:friendship ego                        -0.2754  (   0.1329)
+10. eval:  int.  Dummy2:friendship ego x reciprocity     0.1979  (   0.2740)
+
+@3
+Covariance matrices
+                   
+Covariance matrix of estimates (correlations below diagonal):
+     0.508      0.007      0.002     -0.004      0.003     -0.001     -0.009      0.001     -0.005      0.019
+     0.015      0.429      0.005     -0.005      0.002      0.000     -0.012      0.003      0.008     -0.010
+     0.015      0.039      0.038     -0.003     -0.002      0.003     -0.025     -0.006      0.003     -0.008
+    -0.032     -0.042     -0.093      0.035      0.004     -0.013     -0.005      0.000     -0.001     -0.001
+     0.072      0.061     -0.208      0.449      0.003     -0.004     -0.003      0.001      0.000     -0.001
+    -0.011      0.003      0.161     -0.692     -0.770      0.010      0.001      0.000      0.000      0.003
+    -0.070     -0.103     -0.701     -0.153     -0.339      0.059      0.033      0.002      0.000      0.004
+     0.038      0.092     -0.736     -0.061      0.322     -0.067      0.258      0.002      0.000      0.002
+    -0.056      0.095      0.100     -0.041     -0.027     -0.036     -0.005     -0.080      0.018     -0.024
+     0.096     -0.054     -0.153     -0.016     -0.052      0.106      0.079      0.134     -0.660      0.075
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+Total computation time 166.97 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 21:22:42
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 662748.
+Effects object used: Model3d 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)                      7.2014
+  2. rate:  constant friendship rate (period 2)                      6.0736
+  3. eval:  outdegree (density)                                     -1.2754
+  4. eval:  reciprocity                                              0.0000
+  5. eval:  transitive triplets                                      0.0000
+  6. eval:  3-cycles                                                 0.0000
+  7. eval:  transitive ties                                          0.0000
+  8. eval:  number of actors at distance 2                           0.0000
+  9. eval:  Dummy2:friendship ego                                    0.0000
+ 10. eval:  Dummy2:friendship ego x number of actors at distance 2   0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Number of ties with transitive closure                             585.0000
+  8. Number of directed distances equal to 2                           1481.0000
+  9. Sum of outdegrees x Dummy2:friendship                              -10.0000
+ 10. Dummy2:friendship ego x number of actors at distance 2              27.5000
+
+ 10 parameters, 10 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3938 iterations.
+Parameter estimates based on 938 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.   0.5253  12.8052   0.0410 
+  2.   0.0583  11.8739   0.0049 
+  3.   1.8570  20.4581   0.0908 
+  4.   0.1313  19.1652   0.0069 
+  5.  -0.6440  98.9117  -0.0065 
+  6.   0.4383  31.1638   0.0141 
+  7.  -0.6273  24.4636  -0.0256 
+  8.  -6.3350  84.4220  -0.0750 
+  9.  -0.3135  10.5062  -0.0298 
+ 10.  -0.4678  42.3369  -0.0111 
+
+Good convergence is indicated by the t-ratios being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3938 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           7.3028  (   0.7512)
+ 2. rate:  constant friendship rate (period 2)           6.1833  (   0.6482)
+ 3. eval:  outdegree (density)                          -2.2524  (   0.2083)
+ 4. eval:  reciprocity                                   2.0452  (   0.1909)
+ 5. eval:  transitive triplets                           0.2653  (   0.0541)
+ 6. eval:  3-cycles                                     -0.3287  (   0.0982)
+ 7. eval:  transitive ties                               0.8478  (   0.2025)
+ 8. eval:  number of actors at distance 2               -0.1771  (   0.0440)
+ 9. eval:  Dummy2:friendship ego                        -0.4603  (   0.1600)
+10. eval:  Dummy2:friendship ego x number of actors at   0.1702  (   0.0670)
+
+@3
+Covariance matrices
+                   
+Covariance matrix of estimates (correlations below diagonal):
+     0.564     -0.012     -0.006      0.001      0.001     -0.004     -0.001      0.005      0.017     -0.009
+    -0.026      0.420      0.023      0.001      0.002      0.001     -0.027     -0.002     -0.001      0.001
+    -0.040      0.170      0.043     -0.009     -0.002      0.005     -0.030     -0.007      0.005     -0.002
+     0.005      0.004     -0.233      0.036      0.004     -0.013     -0.001      0.000     -0.001      0.001
+     0.014      0.043     -0.178      0.414      0.003     -0.004     -0.004      0.001      0.000      0.000
+    -0.050      0.016      0.233     -0.688     -0.755      0.010      0.001     -0.001     -0.001      0.000
+    -0.004     -0.207     -0.717     -0.025     -0.388      0.042      0.041      0.002     -0.001      0.001
+     0.151     -0.063     -0.724      0.046      0.370     -0.200      0.250      0.002     -0.001      0.000
+     0.141     -0.011      0.142     -0.035     -0.044     -0.068     -0.024     -0.125      0.026     -0.008
+    -0.175      0.021     -0.149      0.076     -0.009      0.053      0.071      0.027     -0.765      0.004
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+Total computation time 235.76 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 21:49:38
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 734031.
+Effects object used: Model3e 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)                      7.2014
+  2. rate:  constant friendship rate (period 2)                      6.0736
+  3. eval:  outdegree (density)                                     -1.2754
+  4. eval:  reciprocity                                              0.0000
+  5. eval:  transitive triplets                                      0.0000
+  6. eval:  3-cycles                                                 0.0000
+  7. eval:  transitive ties                                          0.0000
+  8. eval:  number of actors at distance 2                           0.0000
+  9. eval:  Dummy2:friendship ego                                    0.0000
+ 10. eval:  Dummy2:friendship ego x transitive triplets              0.0000
+ 11. eval:  Dummy2:friendship ego x number of actors at distance 2   0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Number of ties with transitive closure                             585.0000
+  8. Number of directed distances equal to 2                           1481.0000
+  9. Sum of outdegrees x Dummy2:friendship                              -10.0000
+ 10. Dummy2:friendship ego x transitive triplets                        -57.5000
+ 11. Dummy2:friendship ego x number of actors at distance 2              27.5000
+
+ 11 parameters, 11 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3747 iterations.
+Parameter estimates based on 747 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.  -0.3073  12.8928  -0.0238 
+  2.  -0.7540  11.7475  -0.0642 
+  3.   0.9047  20.8677   0.0434 
+  4.  -0.5227  18.6596  -0.0280 
+  5.  -5.0687  99.2964  -0.0510 
+  6.  -0.6547  30.6737  -0.0213 
+  7.  -2.1057  24.7176  -0.0852 
+  8. -10.0603  86.1382  -0.1168 
+  9.   0.1143  10.2867   0.0111 
+ 10.  -1.7867  48.6555  -0.0367 
+ 11.  -0.5868  42.8430  -0.0137 
+
+Good convergence is indicated by the t-ratios being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3747 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           7.1786  (   0.6977)
+ 2. rate:  constant friendship rate (period 2)           6.1984  (   0.6755)
+ 3. eval:  outdegree (density)                          -2.3110  (   0.2606)
+ 4. eval:  reciprocity                                   2.0750  (   0.1996)
+ 5. eval:  transitive triplets                           0.2790  (   0.0607)
+ 6. eval:  3-cycles                                     -0.3214  (   0.1018)
+ 7. eval:  transitive ties                               0.8196  (   0.2031)
+ 8. eval:  number of actors at distance 2               -0.1692  (   0.0490)
+ 9. eval:  Dummy2:friendship ego                        -0.8834  (   0.3618)
+10. eval:  Dummy2:friendship ego x transitive triplets   0.1055  (   0.0755)
+11. eval:  Dummy2:friendship ego x number of actors at   0.2635  (   0.0965)
+
+@3
+Covariance matrices
+                   
+Covariance matrix of estimates (correlations below diagonal):
+     0.487      0.013     -0.002     -0.003      0.005     -0.006     -0.010      0.004      0.011     -0.001     -0.007
+     0.027      0.456      0.044      0.000      0.000      0.000     -0.035     -0.006      0.038     -0.007     -0.008
+    -0.010      0.251      0.068     -0.016     -0.006      0.006     -0.036     -0.010      0.061     -0.012     -0.014
+    -0.022     -0.002     -0.312      0.040      0.006     -0.014     -0.001      0.001     -0.017      0.003      0.004
+     0.126      0.002     -0.367      0.500      0.004     -0.005     -0.003      0.001     -0.007      0.001      0.001
+    -0.088     -0.003      0.234     -0.677     -0.770      0.010      0.001     -0.001      0.002     -0.001      0.000
+    -0.068     -0.253     -0.674     -0.022     -0.270      0.050      0.041      0.003     -0.020      0.004      0.006
+     0.118     -0.167     -0.779      0.143      0.498     -0.199      0.272      0.002     -0.009      0.002      0.002
+     0.044      0.154      0.647     -0.236     -0.320      0.067     -0.267     -0.520      0.131     -0.025     -0.031
+    -0.017     -0.142     -0.610      0.208      0.326     -0.089      0.241      0.504     -0.904      0.006      0.005
+    -0.098     -0.125     -0.552      0.224      0.181     -0.007      0.290      0.323     -0.876      0.742      0.009
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+Total computation time 223.08 seconds.
+
+
+-----------------------------------
+New Analysis started.
+Date and time: 15/02/2014 22:36:36
+New results follow.
+-----------------------------------
+
+Siena version 1.1-250 (04 Dec 13) R-forge revision: 250 
+
+@1
+Estimation by stochastic approximation algorithm.
+=================================================
+
+Random initialization of random number stream.
+Current random number seed is 237493.
+Effects object used: Model3e 
+Model Type 1: Standard actor-oriented model
+
+NB. Request for conditional estimation has been over-ridden.
+
+Estimation method: unconditional moment estimation.
+
+Time duration for simulations in each period is 1.0.
+Changing composition.
+Joiners/leavers option: 1
+Standard errors are estimated with the likelihood ratio method.
+Dolby method (regression on scores) is used.
+Dependent network variable friendship :
+All digraphs are constrained to having outdegrees not larger than 10 .
+Initial value of gain parameter is  0.4000000.
+Number of subphases in Phase 2 is 4.
+
+Initial parameter values are 
+  1. rate:  constant friendship rate (period 1)                      6.7541
+  2. rate:  constant friendship rate (period 2)                      6.1371
+  3. eval:  outdegree (density)                                     -2.3907
+  4. eval:  reciprocity                                              2.2183
+  5. eval:  transitive triplets                                      0.5250
+  6. eval:  3-cycles                                                -0.4527
+  7. eval:  transitive ties                                          0.0000
+  8. eval:  number of actors at distance 2                           0.0000
+  9. eval:  Dummy2:friendship ego                                   -0.2625
+ 10. eval:  Dummy2:friendship ego x transitive triplets              0.0000
+ 11. eval:  Dummy2:friendship ego x number of actors at distance 2   0.0000
+
+
+Observed values of target statistics are
+  1. Amount of network change in period 1                               208.0000
+  2. Amount of network change in period 2                               184.0000
+  3. Number of ties                                                     736.0000
+  4. Number of reciprocated ties                                        386.0000
+  5. Number of transitive triplets                                     1289.0000
+  6. 3-cycles                                                           299.0000
+  7. Number of ties with transitive closure                             585.0000
+  8. Number of directed distances equal to 2                           1481.0000
+  9. Sum of outdegrees x Dummy2:friendship                              -10.0000
+ 10. Dummy2:friendship ego x transitive triplets                        -57.5000
+ 11. Dummy2:friendship ego x number of actors at distance 2              27.5000
+
+ 11 parameters, 11 statistics
+
+Estimation of derivatives by the LR method (type 1).
+
+@2
+End of stochastic approximation algorithm, phase 3.
+---------------------------------------------------
+
+Total of 3667 iterations.
+Parameter estimates based on 667 iterations,
+convergence diagnostics, covariance and derivative matrices based on 3000 iterations.
+
+Information for convergence diagnosis.
+Averages, standard deviations, and t-ratios for deviations from targets:
+  1.   0.3610  12.9694   0.0278 
+  2.   0.1467  11.7451   0.0125 
+  3.   0.2283  21.5379   0.0106 
+  4.  -0.4747  19.3454  -0.0245 
+  5.   4.5000 103.8149   0.0433 
+  6.  -0.7977  31.7115  -0.0252 
+  7.  -1.0130  25.7761  -0.0393 
+  8.  -1.0033  87.1977  -0.0115 
+  9.   0.6752  10.9789   0.0615 
+ 10.   0.0980  51.1561   0.0019 
+ 11.  -0.2913  44.4197  -0.0066 
+
+Good convergence is indicated by the t-ratios being close to zero.
+
+
+@2
+Estimation Results.
+-------------------
+
+Regular end of estimation algorithm.
+Total of 3667 iteration steps.
+
+@3
+Estimates and standard errors
+                             
+ 1. rate:  constant friendship rate (period 1)           7.2866  (   0.6977)
+ 2. rate:  constant friendship rate (period 2)           6.2074  (   0.6546)
+ 3. eval:  outdegree (density)                          -2.4103  (   0.2449)
+ 4. eval:  reciprocity                                   2.1094  (   0.2004)
+ 5. eval:  transitive triplets                           0.3066  (   0.0573)
+ 6. eval:  3-cycles                                     -0.3572  (   0.1010)
+ 7. eval:  transitive ties                               0.8389  (   0.1985)
+ 8. eval:  number of actors at distance 2               -0.1476  (   0.0482)
+ 9. eval:  Dummy2:friendship ego                        -0.9037  (   0.3413)
+10. eval:  Dummy2:friendship ego x transitive triplets   0.1111  (   0.0727)
+11. eval:  Dummy2:friendship ego x number of actors at   0.2607  (   0.0948)
+
+@3
+Covariance matrices
+                   
+Covariance matrix of estimates (correlations below diagonal):
+     0.487     -0.002      0.015     -0.008      0.004     -0.003     -0.023      0.002      0.014     -0.001     -0.007
+    -0.004      0.429      0.036     -0.005     -0.004      0.007     -0.024     -0.005      0.030     -0.007     -0.006
+     0.085      0.224      0.060     -0.013     -0.005      0.005     -0.033     -0.009      0.050     -0.010     -0.012
+    -0.059     -0.040     -0.270      0.040      0.006     -0.014     -0.002      0.001     -0.016      0.003      0.005
+     0.100     -0.099     -0.360      0.485      0.003     -0.004     -0.003      0.001     -0.006      0.001      0.001
+    -0.044      0.103      0.222     -0.689     -0.751      0.010      0.001     -0.001      0.002     -0.001      0.000
+    -0.170     -0.185     -0.672     -0.059     -0.266      0.033      0.039      0.003     -0.015      0.003      0.004
+     0.067     -0.143     -0.773      0.100      0.460     -0.143      0.266      0.002     -0.008      0.002      0.001
+     0.057      0.134      0.604     -0.229     -0.307      0.065     -0.227     -0.513      0.116     -0.022     -0.028
+    -0.023     -0.140     -0.586      0.189      0.308     -0.072      0.215      0.537     -0.902      0.005      0.005
+    -0.104     -0.092     -0.515      0.252      0.225     -0.035      0.213      0.310     -0.864      0.715      0.009
+
+Derivative matrix of expected statistics X by parameters and
+covariance/correlation matrix of X can be found using
+summary(ans) within R, or by using the 'verbose' option in Siena07.
+ 
+Total computation time 210.69 seconds.

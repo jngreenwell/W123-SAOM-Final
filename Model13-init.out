@@ -1,14 +1,14 @@
 							************************
-									 WC_init.out
+									 Model13-init.out
 							************************
 
-Filename is WC_init.out.
+Filename is Model13-init.out.
 
-This file contains primary output for SIENA project <<WC_init>>.
+This file contains primary output for SIENA project <<Model13-init>>.
 
-Date and time: 25/01/2014 9:40:07 a.m. 
+Date and time: 14/02/2014 11:34:28 a.m. 
 
-SIENA version 1.1-232 (18 06 2013)
+SIENA version 1.1-250 (04 12 2013) R-forge revision: 250 
 
 @1
 Data input.
@@ -18,7 +18,7 @@ Data input.
 85 actors,
 1 dependent network variables,
 0 dependent bipartite variables,
-0 dependent behavior variables,
+1 dependent behavior variables,
 2 constant actor covariates,
 1 exogenous changing actor covariates,
 0 constant dyadic covariates,
@@ -163,23 +163,45 @@ the last previous nonmissing value (if any) is imputed.
 If there is no previous nonmissing value, the value 0 is imputed.
 
 @2
+Reading dependent actor variables.
+----------------------------------
+
+1st dependent actor variable named Smoking.
+Maximum and minimum rounded values are 1 and 2.
+Missing values in this actor variable are imputed by the mode per observation.
+But if there is a previous (or later) nonmissing value, this is used as the imputed value.
+Modal values:
+Observation	   1    2    3 
+Modes           1    1    1
+
+
+A total of 1 dependent actor variable.
+
+Number of missing cases per observation:
+ observation         1         2         3		overall
+Smoking             14        17        18        49	  (19.2 %)
+
+Means per observation:
+ observation         1         2         3		overall
+Smoking            1.085     1.118     1.045     1.082
+@2
 Reading constant actor covariates.
 ----------------------------------
 
 2 variables, named:
-sex             
-ethnic          
+Sex             
+Ethnic          
 
 A total of 2 non-changing individual covariates.
 
 Number of missing cases:
-sex             0 	( 0.0 %)
-ethnic          0 	( 0.0 %)
+Sex             0 	( 0.0 %)
+Ethnic          0 	( 0.0 %)
 
 Information about covariates:
-               minimum  maximum	  mean 
-sex             1.0     2.0      1.800 
-ethnic          1.0     2.0      1.612 
+               minimum  maximum	  mean  centered 
+Sex             1.0     2.0      1.800    Y 
+Ethnic          1.0     3.0      1.941    Y 
 The mean values are subtracted from the covariates.
 
 @2
@@ -187,22 +209,21 @@ Reading exogenous changing actor covariates.
 --------------------------------------------
 
 1 variable, named:
-alcohol         
+Drink           
 
 A total of 1 exogenous changing actor covariate.
 
 Number of missing cases per period:
  period	        1        2		 overall
-alcohol          14       16        30 	   ( 17.6 %)
+Drink            14       16        30 	   ( 17.6 %)
 
 Information about changing covariates:
-               minimum  maximum	  mean 
-alcohol 
+               minimum  maximum	  mean  centered 
+Drink 
 	period   1     1.0     2.0      1.183 
 	period   2     1.0     2.0      1.290 
-Overall                            1.236 
-
-The overall mean value is subtracted from the covariate.
+Overall                            1.236    Y 
+The mean value is subtracted from the centered covariate.
 
 @2
 Reading exogenous dyadic covariates.
@@ -235,26 +256,35 @@ In period 1, 0 actors joined and 4 actors left the network.
 In period 2, 2 actors joined and 0 actors left the network.
 
 
-There are missing data for network variable friendship.
 
+Behavior Smoking:
+All behavior changes are downward for the following periods:
+2 => 3;
+This will be respected in the simulations.
+
+There are missing data for network variable friendship.
+There are missing data for behavior variable Smoking.
 The mean structural dissimilarity value subtracted in the
 balance calculations is         0.1204.
 
 For the similarity variable calculated from each actor covariate,
 the mean is subtracted.
 These means are:
-Similarity sex          :       0.6762 
-Similarity ethnic       :       0.5193 
-Similarity alcohol      :       0.6411 
+Similarity Sex          :       0.6762 
+Similarity Ethnic       :       0.5588 
+Similarity Smoking      :       0.8173 
+Similarity Drink        :       0.6411 
 
 For the distance-2 similarity variable calculated from each actor 
 covariate, the mean is also subtracted.
  These means are:
-Distance-2 Similarity sex         :  friendship
+Distance-2 Similarity Sex         :  friendship
                                          0.7705
-Distance-2 Similarity ethnic      :  friendship
-                                         0.6717
-Distance-2 Similarity alcohol      :   friendship 
+Distance-2 Similarity Ethnic      :  friendship
+                                         0.7482
+Distance-2 Similarity Smoking     :friendship  
+                                         0.8913
+Distance-2 Similarity Drink        :   friendship 
                                          0.8168
 
 
@@ -280,10 +310,10 @@ The average degree is 5.449
 
 Tie changes between subsequent observations:
  periods        0 =>  0   0 =>  1   1 =>  0   1 =>  1   Distance Jaccard   Missing
-  1 ==>  2      4681       119        98       226       217     0.510  2016 (28%)
-  2 ==>  3      4625        92        88       235       180     0.566  2100 (29%)
+  1 ==>   2      4681       119        98       226       217     0.510      2016 (28%)
+  2 ==>   3      4625        92        88       235       180     0.566      2100 (29%)
 
-Dyad Counts:
+Directed dyad Counts:
  observation    total    mutual    asymm.     null
      1.          5550      198       326      5026
      2.          4830      234       220      4376
@@ -296,4 +326,33 @@ constant friendship rate (period 1)     7.2014
 constant friendship rate (period 2)     6.0736 
 outdegree (density)                               -1.2754 
 
-Initialisation of project <<WC_init>> executed succesfully.
+
+@2
+Dependent actor variables:
+--------------------------
+
+Smoking 
+
+@3
+Marginal distribution
+                     
+                Observations
+values               1     2     3
+                ------------------
+  1                 65    60    64
+  2                  6     8     3
+missing             14    17    18
+
+(fraction missing  0.16  0.20  0.21  )
+
+
+@3
+Changes
+       
+ periods    actors:  down   up   constant  missing  ;   steps:   down    up  total
+  1  =>  2             1     2      54        28                    1     2     3
+  2  =>  3             3     0      54        28                    3     0     3
+
+For this variable, the standard initial behavioral tendency parameter is  -0.3455
+
+Initialisation of project <<Model13-init>> executed succesfully.
